@@ -19,7 +19,8 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: 
+    version: "2.2.102"
+
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
