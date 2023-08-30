@@ -25,6 +25,12 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'Test(b068c367-6a6b-4d91-9f91-ae6548fcaa96)'
+    KeyVaultName: 'shakha1'
+    SecretsFilter: '*'
+    RunAsPreJob: false
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
